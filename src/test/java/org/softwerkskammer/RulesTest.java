@@ -10,19 +10,19 @@ import java.util.Collection;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import static org.softwerkskammer.Rules.ALIVE;
-import static org.softwerkskammer.Rules.DEAD;
+import static org.softwerkskammer.State.ALIVE;
+import static org.softwerkskammer.State.DEAD;
 
 @RunWith(Parameterized.class)
 public class RulesTest {
 
     private Rules rules;
 
-    private boolean isAlive;
+    private State isAlive;
     private int livingNeighbours;
-    private boolean expected;
+    private State expected;
 
-    public RulesTest(boolean isAlive, int livingNeighbours, boolean expected) {
+    public RulesTest(State isAlive, int livingNeighbours, State expected) {
         this.rules = new Rules();
 
         this.isAlive = isAlive;
