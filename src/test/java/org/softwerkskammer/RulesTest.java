@@ -35,7 +35,7 @@ public class RulesTest {
         assertThat(this.rules.next(isAlive, livingNeighbours), is(expected));
     }
 
-    @Parameters
+    @Parameters(name = "{index}: next({0}, {1}) => {2}")
     public static Collection<Object[]> data() {
         Object[][] data = {
                 {DEAD, 0, DEAD},
