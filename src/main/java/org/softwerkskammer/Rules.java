@@ -2,6 +2,9 @@ package org.softwerkskammer;
 
 public class Rules {
 
+    public static final boolean ALIVE = true;
+    public static final boolean DEAD = false;
+
     public boolean next(boolean isAlive, int livingNeighbours) {
         // Any live cell with fewer than two live neighbours dies, as if by underpopulation.
         if (isAlive && livingNeighbours < 2) {
